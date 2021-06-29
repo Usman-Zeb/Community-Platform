@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentDiscussion"
+    android:orientation="vertical">
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input"
+        app:outcomingDefaultBubbleColor="@color/colorPrimary"
+        app:incomingDefaultBubbleColor="@color/gray"
+
+        />
+
+    <TextView
+        android:id="@+id/typing_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/input"
+        android:layout_below="@+id/messagesList"
+        android:paddingLeft="2dp"
+
+        android:layout_alignBottom="@+id/input"
+
+        />
+
+    <com.stfalcon.chatkit.messages.MessageInput
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:inputButtonDefaultBgPressedColor="@color/colorAccent"
+        app:inputButtonDefaultBgColor="@color/colorPrimary"
+        app:inputHint="Enter a message" />
+
+
+</RelativeLayout>
